@@ -1,17 +1,32 @@
-<% for(var i = 0; i < users.length; i++) { %>
+<% for(var i = 0; i < books.length; i++) { %>
 <tr>
-    <td><%= i + 1 %></td>
-    <td><%= users[i].name %></td>
-    <td><%= users[i].email %></td>
-    <td><%= users[i].gender %></td>
-    <td><%= users[i].status %></td>
-    <td>
-        <a href="/update-user?id=<%= users[i]._id%>" class="btn border-shadow update">
-            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
-        </a>
-        <a class="btn border-shadow delete" data-id=<%= users[i]._id%> >
-            <span class="text-gradient"><i class="fas fa-times"></i></span>
-        </a>
-    </td>
+  <td><%= i + 1 %></td>
+  <td><%= books[i].book %></td>
+  <td><%= books[i].author %></td>
+  <td><%= books[i].genre %></td>
+  <td><%= books[i].year %></td>
+  <td><%= books[i].ISBM %></td>
+  <td>
+    <a
+      href="/update-book?id=<%= books[i]._id%>"
+      class="btn border-shadow update"
+      aria-label="Update book"
+    >
+      <span class="text-gradient"
+        ><i class="fas fa-pencil-alt" aria-hidden="true"></i
+      ></span>
+    </a>
+    <a
+      class="btn border-shadow delete"
+      data-id="<%= books[i]._id %>"
+      tabindex="0"
+      role="button"
+      aria-label="Delete book"
+    >
+      <span class="text-gradient"
+        ><i class="fas fa-times" aria-hidden="true"></i
+      ></span>
+    </a>
+  </td>
 </tr>
 <% } %>
