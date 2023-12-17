@@ -9,15 +9,13 @@ exports.create = (req, res) => {
   }
 
   // new book
-  // new book
   const newBook = new BookDb({
     book: req.body.book,
     author: req.body.author,
     genre: req.body.genre,
-    year: req.body.year,
+    year: new Date(req.body.year),
     isbn: req.body.isbn,
   });
-
   // save book in the database
   newBook
     .save()

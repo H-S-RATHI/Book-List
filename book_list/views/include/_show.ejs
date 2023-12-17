@@ -4,8 +4,8 @@
   <td><%= books[i].book %></td>
   <td><%= books[i].author %></td>
   <td><%= books[i].genre %></td>
-  <td><%= books[i].year %></td>
-  <td><%= books[i].ISBM %></td>
+  <td><%= (new Date(books[i].year)).toLocaleDateString("en-GB") %></td>
+  <td><%= books[i].isbn %></td>
   <td>
     <a
       href="/update-book?id=<%= books[i]._id%>"

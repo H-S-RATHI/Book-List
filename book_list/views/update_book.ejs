@@ -7,18 +7,18 @@
   <div class="container">
     <div class="box-nav d-flex justify-between">
       <div class="filter">
-        <a href="/"><i class="fas fa-angle-double-left"></i> All Users</a>
+        <a href="/"><i class="fas fa-angle-double-left"></i> All books</a>
       </div>
     </div>
     <div class="form-title text-center">
-      <h2 class="text-dark">Update User</h2>
-      <span class="text-light">Use the below form to Update an account</span>
+      <h2 class="text-dark">Update Book Details</h2>
+      <span class="text-light">Use the below form to Update Book Details</span>
     </div>
 
-    <!-- add user form -->
+    <!-- add book form -->
     <!-- form handling -->
     <form action="/api/books" method="POST" id="update_book">
-      <div class="new_user">
+      <div class="new_book">
         <div class="form-group">
           <label for="book" class="text-light">Book Title</label>
           <input type="hidden" name="id" value="<%= book._id %>" />
@@ -53,13 +53,8 @@
 
         <div class="form-group">
           <label for="year" class="text-light">Year of Publication</label>
-          <input
-            type="date"
-            name="year"
-            value="<%= book.year %>"
-            placeholder=""
-            required
-          />
+          <input type="date" name="year" value="<%=new
+          Date(book.year).toISOString().split("T")[0]%>" required />
         </div>
         <div class="form-group">
           <label for="isbn" class="text-light">isbn</label>

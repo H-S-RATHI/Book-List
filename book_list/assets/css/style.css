@@ -144,7 +144,7 @@ table {
   }
 }
 
-/*  add user & update user template */
+/*  add book & update book template */
 .form-title {
   margin-top: 2em;
 }
@@ -153,17 +153,17 @@ table {
   padding: 0.5em 0;
 }
 
-.new_user {
+.new_book {
   max-width: 786px;
   margin: auto;
 }
 
-#update_user .form-group,
+#update_book .form-group,
 #add_book .form-group {
   margin: 0.4em 0;
 }
 
-#update_user .form-group input[type="text"],
+#update_book .form-group input[type="text"],
 #add_book .form-group input[type="text"] {
   width: 100%;
   padding: 0.6em 1em;
@@ -174,7 +174,7 @@ table {
   border-radius: 0.2em;
 }
 
-#update_user .form-group .radio,
+#update_book .form-group .radio,
 #add_book .form-group .radio {
   margin: 1em 2em;
 }
@@ -219,7 +219,7 @@ table {
   background: #b4b4b4;
 }
 
-#update_user .form-group .btn,
+#update_book .form-group .btn,
 #add_book .form-group .btn {
   width: 100%;
   padding: 0.9em 1em;
@@ -232,7 +232,7 @@ table {
   margin: 0.5em 0;
 }
 
-#update_user .form-group .btn:hover,
+#update_book .form-group .btn:hover,
 #add_book .form-group .btn:hover {
   background-color: var(--dark);
   color: var(--border);
